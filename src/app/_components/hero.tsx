@@ -5,12 +5,12 @@ import Image from 'next/image'
 
 export function Hero() {
     return (
-        <section className="bg-[#ffa200] text-white relative overflow-hidden">
+        <section className="bg-[#00aaff] text-white relative overflow-hidden">
 
             <div>
                 <Image
                  src={dogImg}
-                 alt='Foto do cachoro'
+                 alt='Foto do cachorro'
                  fill
                  sizes='100vw'
                  priority
@@ -21,21 +21,27 @@ export function Hero() {
 
             </div>
 
-        <div className='container mx-auto pt-16 pb-16 md:pb-0 relative'>
+        <div className='container mx-auto pt-16 pb-16 md:pb-0 px-4 relative'>
             
             <article className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
                 <div className='space-y-6'>
-                    <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-10">
+
+                    <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-10"
+                        data-aos="fade-down"
+                    >
                         É essencial dar cuidado, carinho e atenção especial ao seu pet.
                     </h1>
-                    <p className="lg:text-lg">
+                    <p className="lg:text-lg" data-aos="fade-right">
                         Garantimos o bem-estar e a felicidade do seu amigo de quatro patas com serviços de excelência.
                     </p>
 
                     
                         <a 
-                        href="#"
-                        className="bg-green-500 px-5 py-2 rounded-md font-semibold flex items-center justify-center w-fit gap-2"
+                        data-aos="fade-up"
+                        data-aos-delay="500"
+                        target='_blank'
+                        href={`https://wa.me/5511990143011?text=Olá vim pelo site e gopstaria de mais informações`}
+                        className="bg-green-500 hover:bg-green-600 px-5 py-2 rounded-md font-semibold flex items-center justify-center w-fit gap-2"
                         >
                             <WhatsappLogoIcon className='w-5 h-5'/>
                             Contato via WhatsApp
